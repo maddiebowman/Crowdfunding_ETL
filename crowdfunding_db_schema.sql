@@ -24,7 +24,7 @@ CREATE TABLE "campaign" (
      )
 );
 
--- NOTE: Manually import campaign.csv into table
+-- NOTE: Manually import campaign.csv after creating tables
 
 
 -- Create category table
@@ -37,7 +37,7 @@ CREATE TABLE "category" (
      )
 );
 
--- NOTE: Manually import category.csv into table
+-- NOTE: Manually import category.csv after creating tables
 
 
 -- Create subcategory table
@@ -50,7 +50,7 @@ CREATE TABLE "subcategory" (
      )
 );
 
--- NOTE: Manually import subcategory.csv into table
+-- NOTE: Manually import subcategory.csv after creating tables
 
 
 -- Create contacts table
@@ -65,7 +65,7 @@ CREATE TABLE "contacts" (
      )
 );
 
--- NOTE: Manually import contacts.csv into table
+-- NOTE: Manually import contacts.csv after creating tables
 
 
 
@@ -80,7 +80,7 @@ REFERENCES "subcategory" ("subcategory_id");
 
 
 
--- Verify that each table has the correct data by running SELECT *
+-- After, verify that each table has the correct data by running SELECT *
 
 -- Display campaign table 
 SELECT * FROM campaign;
