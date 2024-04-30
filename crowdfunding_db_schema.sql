@@ -2,20 +2,19 @@
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/XDKWAu
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
-
 CREATE TABLE "campaign" (
-    "cf_id" INT   NOT NULL,
+	"cf_id" INT NOT NULL, 
     "contact_id" INT   NOT NULL,
     "company_name" VARCHAR(255)   NOT NULL,
     "description" TEXT   NOT NULL,
-    "goal" NUMERIC(10,1)   NOT NULL,
-    "pledged" NUMERIC(10,1)   NOT NULL,
+    "goal" NUMERIC(10,1) NOT NULL,
+    "pledged" NUMERIC(10,1) NOT NULL,
     "outcome" VARCHAR(30)   NOT NULL,
     "backers_count" INT   NOT NULL,
     "country" VARCHAR(10)   NOT NULL,
     "currency" VARCHAR(10)   NOT NULL,
     "launched_date" DATE   NOT NULL,
-    "end_date" DATE   NOT NULL,
+    "end_date" DATE  NOT NULL,
     "category_id" VARCHAR(30)   NOT NULL,
     "subcategory_id" VARCHAR(30)   NOT NULL,
     CONSTRAINT "pk_campaign" PRIMARY KEY (
@@ -58,3 +57,7 @@ REFERENCES "category" ("category_id");
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
 REFERENCES "subcategory" ("subcategory_id");
 
+SELECT * FROM campaign;
+SELECT * FROM category;
+SELECT * FROM contacts;
+SELECT * FROM subcategory;
